@@ -1,0 +1,50 @@
+/***************************/
+/*  DESKTOP BEFORE　(LG)   */
+/***************************/
+/* DICHIARAZIONE VARIABILI */
+:root
+{
+/* VARIABILI DIMENSIONALI */
+    --top_bar_h:        75px;
+    --side_bar_w:       150px;
+    --bottom_bar_h:     75px;
+/* VARIABILI CROMATICHE */
+    --top_bar:          #080B12;
+    --side_bar:         #000000;
+    --bottom_bar:       #282828;
+    --main_block:       #141922;
+}
+/***************************/
+
+*
+{
+   font-family: 'Gotham Black', sans-serif; 
+}
+
+#web_app
+{
+    height: 100vh;
+    background-color: var(--main_block);
+}
+
+#top_bar
+{
+    width: 100%;
+    height: var(--top_bar_h);
+    background-color: var(--top_bar);
+    opacity: 0.85;
+}
+
+#side_bar
+{
+    width: var(--side_bar_w);
+    height: calc(100% - var(--bottom_bar_h));
+    z-index: 1000;
+    background-color: var(--side_bar);
+}
+
+#bottom_bar
+{
+    height: var(--bottom_bar_h);
+    background-color: var(--bottom_bar);
+}
