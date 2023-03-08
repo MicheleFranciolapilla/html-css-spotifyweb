@@ -8,30 +8,47 @@
     --top_bar_h:        75px;
     --side_bar_w:       150px;
     --bottom_bar_h:     75px;
+    --side_flex_gap:    10px;
 /* VARIABILI CROMATICHE */
-    --top_bar:          #080B12;
-    --side_bar:         #000000;
-    --bottom_bar:       #282828;
-    --main_block:       #141922;
+    --top_bar_col:      #080B12;
+    --side_bar_col:     #000000;
+    --bottom_bar_col:   #282828;
+    --main_block_col:   #141922;
 }
 /***************************/
 
 *
 {
    font-family: 'Gotham Black', sans-serif; 
+   color: #717171;
+}
+
+span
+{
+    font-size: 0.7rem;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.white_txt
+{
+    color: white;
 }
 
 #web_app
 {
     height: 100vh;
-    background-color: var(--main_block);
+    background-color: var(--main_block_col);
 }
 
 #top_bar
 {
     width: 100%;
     height: var(--top_bar_h);
-    background-color: var(--top_bar);
+    background-color: var(--top_bar_col);
     opacity: 0.85;
 }
 
@@ -40,11 +57,30 @@
     width: var(--side_bar_w);
     height: calc(100% - var(--bottom_bar_h));
     z-index: 1000;
-    background-color: var(--side_bar);
+    background-color: var(--side_bar_col);
+    gap: var(--side_flex_gap);
+}
+
+#logo
+{
+    flex-basis: var(--top_bar_h);
+    line-height: var(--top_bar_h);
+}
+
+#side_bar > .icons > img
+{
+    vertical-align: middle;
 }
 
 #bottom_bar
 {
     height: var(--bottom_bar_h);
-    background-color: var(--bottom_bar);
+    background-color: var(--bottom_bar_col);
 }
+
+
+
+/**************************************************/
+/* SETTORE MEDIA QUERY */
+/**************************************************/
+
