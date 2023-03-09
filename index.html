@@ -16,9 +16,11 @@
 </head>
 <body>
     <div id="web_app">
+
         <div id="side_bar" class="d_flex flex_column flex_cross_start p_rel">
-            <a href="#" id="logo">
-                <img src="assets/img/logo.svg" alt="Logo" width="70%">
+            <a href="#" id="logo" class="p_rel">
+                <img id="small_logo" src="assets/img/logo-small.svg" alt="Logo piccolo" width="17%">
+                <img id="wide_logo" class="p_abs d_ib" src="assets/img/logo.svg" alt="Logo esteso" width="80%">
             </a>
             <a href="#" class="icons">
                 <img src="assets/img/home.svg" alt="home" width="15%">
@@ -32,9 +34,35 @@
                 <img src="assets/img/libreria.svg" alt="libreria" width="15%">
                 <span>La tua libreria</span>
             </a>
+            <div id="playlist" class="d_flex flex_column">
+                <h6 class="white_txt">PLAYLIST</h6>
+                <a href="#">
+                    <span id="add" class="d_ib">+</span>
+                    <span><strong>Crea Playlist</strong></span>
+                </a>
+                <a href="#">Nome Playlist</a>
+                <a href="#">Nome Playlist</a>
+                <a href="#">Nome Playlist</a>
+                <a href="#">Nome Playlist</a>
+                <a href="#">Nome Playlist</a>
+                <a href="#">Nome Playlist</a>
+                <a href="#">Nome Playlist</a>
+            </div>
+            <div id="install" class="icons p_abs">
+                <a href="#">
+                    <img src="assets/img/download.svg" alt="download" width="10%">
+                    <span>Installa App</span>
+                </a>
+                <hr style="border-color: #717171; margin: 5px 15px 5px 0;">
+                <a href="#">
+                    <img id="profile" src="assets/img/profile.svg" alt="download" width="15%">
+                    <span class="white_txt">John Doe</span>
+                </a>
+            </div>
         </div>
+
         <div id="top_bar" class="p_fixed_header"></div>
-        <div id="bottom_bar"></div>
+        <div id="bottom_bar" class="p_rel"></div>
     </div>
 </body>
 </html>
