@@ -12,8 +12,11 @@
     --tricky_box_h:     60px;
     --side_flex_gap:    10px;
     --side_left_padd:   15px;
+    --core_padding:     15px;
+    --core_gap:         50px;
+    --core_flex_gap:    20px;
 /* VARIABILI CROMATICHE */
-    --top_bar_col:      #080B12;
+    --top_bar_col:      rgba(0,0,0,0.7);
     --side_bar_col:     #000000;
     --bottom_bar_col:   #282828;
     --main_block_col:   #141922;
@@ -54,7 +57,6 @@ a
     width: 100%;
     height: var(--top_bar_h);
     background-color: var(--top_bar_col);
-    opacity: 0.85;
 }
 
 #side_bar
@@ -151,6 +153,78 @@ a
     background-color: #A3A3A3;
 }
 
+#page_core
+{
+    top: 0;
+    left: var(--side_bar_w);
+    right: 0;
+    height: 100%;
+    overflow: auto;
+}
+
+#core
+{
+    padding-left: var(--core_padding);
+    padding-top: calc(var(--top_bar_h) + var(--core_padding));
+}
+
+#page_core > #core > #menu > li
+{
+    padding: 0 10px;
+    line-height: 1.3rem;
+}
+
+#page_core > #core > #menu #short_line::before
+{
+    position: absolute;
+    top: 1rem;
+    left: 30%;
+    height: 0;
+    width: 40%;
+    content: "";
+    border-top: 2px solid yellowgreen;
+}
+
+#core > .core_gap
+{
+    color: white;
+    margin-top: var(--core_gap);
+}
+
+#core > .sub_margins
+{
+    margin: 10px 0;
+}
+
+#core > .not_menu
+{
+    margin-top: calc(var(--core_gap) / 2);
+    gap: var(--core_flex_gap);
+}
+
+#core > .not_menu > li
+{
+    flex-basis: calc((98vw - (var(--side_bar_w) + (2 * var(--core_padding)) + (5 * var(--core_flex_gap)))) / 6);
+}
+
+#core > .not_menu > li img
+{
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+#core > #popular > li img
+{
+    border-radius: 50%;
+}
+
+#core > ul h3
+{
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
 #bottom_bar
 {
     min-height: var(--bottom_bar_h);
@@ -194,6 +268,24 @@ a
     #tricky_box
     {
         display: none;
+    }
+}
+
+/* TABLET MEDIUM - MAX-WIDTH: 768 PIXEL */
+@media only screen and (max-width: 768px)
+{
+    #core > .not_menu > li
+    {
+        flex-basis: calc((98vw - (var(--side_bar_w) + (2 * var(--core_padding)) + (3 * var(--core_flex_gap)))) / 4);
+    }
+}
+
+/* SMARTPHONE S - MAX-WIDTH: 425 PIXEL */
+@media only screen and (max-width: 425px)
+{
+    #core > .not_menu > li
+    {
+        flex-basis: calc((98vw - (var(--side_bar_w) + (2 * var(--core_padding)) + var(--core_flex_gap))) / 2);
     }
 }
 
@@ -245,9 +337,24 @@ a
         justify-content: flex-start;
     }
 
+    #page_core
+    {
+        left: var(--side_bar_w_xs);
+    }
+
     #tricky_box
     {
         justify-content: space-evenly;
     }
+
+#page_core
+{
+    left: var(--side_bar_w_xs);
+}
+
+#core > .not_menu > li
+{
+    flex-basis: calc((98vw - (var(var(--side_bar_w_xs)) + (2 * var(--core_padding)) + var(--core_flex_gap))) / 2);
+}
 
 }
