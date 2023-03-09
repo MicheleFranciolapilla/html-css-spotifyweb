@@ -44,7 +44,7 @@ a
 #web_app
 {
     /* min-height: calc(var(--top_bar_h) + var(--bottom_bar_h) + 50px); */
-    min-height: 350px;
+    /* min-height: 350px; */
     height: 100vh;
     background-color: var(--main_block_col);
 }
@@ -76,7 +76,7 @@ a
 {
     padding-left: 5px;
     background-color: var(--side_bar_col);
-    left: 0;
+    left: var(--side_left_padd);
     top: 40%;
     transform: translateY(-50%);
 }
@@ -163,7 +163,41 @@ a
 /**************************************************/
 /* SETTORE MEDIA QUERY */
 /**************************************************/
-/* SMARTPHONE XS - MAX-WIDTH: 320 PIXELS */
+/* MODALITA' ALTEZZA RIDOTTA A 350 PIXEL */
+@media only screen and (max-height: 350px)
+{
+    #side_bar
+    {
+        height: calc(100% - (var(--tricky_box_h) + var(--bottom_bar_h)) + (var(--tricky_box_h) / 2));
+    }
+
+    #tricky_box
+    {
+        height: calc(var(--tricky_box_h) / 2);
+    }
+
+    #tricky_box > hr,
+    #tricky_box > a:last-child
+    {
+        display: none;
+    }
+}
+
+/* MODALITA' ALTEZZA RIDOTTA A 320 PIXEL */
+@media only screen and (max-height: 320px)
+{
+    #side_bar
+    {
+        height: calc(100% - var(--bottom_bar_h));
+    }
+
+    #tricky_box
+    {
+        display: none;
+    }
+}
+
+/* SMARTPHONE XS - MAX-WIDTH: 320 PIXEL */
 @media only screen and (max-width: 320px)
 {
     #side_bar > #logo > #wide_logo,
