@@ -7,6 +7,7 @@
 /* VARIABILI DIMENSIONALI */
     --top_bar_h:        75px;
     --side_bar_w:       150px;
+    --side_bar_w_xs:    35px;
     --bottom_bar_h:     75px;
     --tricky_box_h:     60px;
     --side_flex_gap:    10px;
@@ -42,6 +43,8 @@ a
 
 #web_app
 {
+    /* min-height: calc(var(--top_bar_h) + var(--bottom_bar_h) + 50px); */
+    min-height: 350px;
     height: 100vh;
     background-color: var(--main_block_col);
 }
@@ -60,13 +63,12 @@ a
     height: calc(100% - (var(--tricky_box_h) + var(--bottom_bar_h)));
     z-index: 1000;
     background-color: var(--side_bar_col);
-    padding-left: var(--side_left_padd);
+    /* padding-left: var(--side_left_padd); */
     gap: var(--side_flex_gap);
 }
 
 #side_bar > #logo
 {
-    flex-basis: var(--top_bar_h);
     line-height: var(--top_bar_h);
 }
 
@@ -79,19 +81,33 @@ a
     transform: translateY(-50%);
 }
 
+#side_bar > #home
+{
+    border-left: 2px solid yellowgreen;
+}
+
+#side_bar > .padd_l
+{
+    padding-left: var(--side_left_padd);
+}
+
+#side_bar > .icons
+{
+    line-height: 25px;
+}
+
 #side_bar > .icons img
 {
     vertical-align: middle;
 }
 
-#side_bar > #playlist
+#side_bar > #playlist_top > h6
 {
-    padding-top: 10px;
-    overflow: auto;
-    gap: var(--side_flex_gap);
+    margin-top: 10px;
+    margin-bottom: 7px;
 }
 
-#side_bar > #playlist > a > #add
+#side_bar > #playlist_top > a > #add
 {
     width: 20px;
     height: 20px;
@@ -100,6 +116,14 @@ a
     text-align: center;
     color: var(--side_bar_col);
     background-color: #A3A3A3;
+}
+
+#side_bar > #playlist
+{
+    width: 100%;
+    padding-top: 10px;
+    gap: var(--side_flex_gap);
+    overflow: auto;
 }
 
 #tricky_box
@@ -111,7 +135,13 @@ a
     background-color: var(--side_bar_col);
 }
 
-#tricky_box img{
+#tricky_box > a
+{
+    width: 100%;
+}
+
+#tricky_box img
+{
     vertical-align: middle;
 }
 
@@ -123,7 +153,7 @@ a
 
 #bottom_bar
 {
-    height: var(--bottom_bar_h);
+    min-height: var(--bottom_bar_h);
     background-color: var(--bottom_bar_col);
     z-index: 1001;
 }
@@ -133,4 +163,57 @@ a
 /**************************************************/
 /* SETTORE MEDIA QUERY */
 /**************************************************/
+/* SMARTPHONE XS - MAX-WIDTH: 320 PIXELS */
+@media only screen and (max-width: 320px)
+{
+    #side_bar > #logo > #wide_logo,
+    #side_bar > #playlist_top,
+    #side_bar > #playlist,
+    .icons span,
+    #tricky_box > hr
+    {
+        display: none;
+    }
 
+    #side_bar,
+    #tricky_box
+    {
+        padding: 0;
+        width: var(--side_bar_w_xs);
+        align-items: center;
+    }
+
+    #side_bar > .padd_l{
+        padding-left: 0;
+    }
+
+    #side_bar > #logo
+    {
+        padding-top: 5px;
+        line-height: initial;
+        text-align: center;
+    }
+
+    #side_bar > .icons,
+    #tricky_box > .d_block
+    {
+        text-align: center;
+    }
+
+    #side_bar img,
+    #tricky_box img
+    {
+        width: 50%;
+    }
+
+    #side_bar
+    {
+        justify-content: flex-start;
+    }
+
+    #tricky_box
+    {
+        justify-content: space-evenly;
+    }
+
+}

@@ -18,28 +18,30 @@
     <div id="web_app">
 
         <div id="side_bar" class="d_flex flex_column flex_cross_start p_rel">
-            <a href="#" id="logo" class="p_rel">
+            <a href="#" id="logo" class="p_rel padd_l">
                 <img id="small_logo" src="assets/img/logo-small.svg" alt="Logo piccolo" width="17%">
                 <img id="wide_logo" class="p_abs d_ib" src="assets/img/logo.svg" alt="Logo esteso" width="80%">
             </a>
-            <a href="#" class="icons">
+            <a href="#" id="home" class="icons padd_l">
                 <img src="assets/img/home.svg" alt="home" width="15%">
                 <span class="white_txt">Home</span>
             </a>
-            <a href="#" class="icons">
+            <a href="#" class="icons padd_l">
                 <img src="assets/img/search.svg" alt="cerca" width="15%">
                 <span>Cerca</span>
             </a>
-            <a href="#" class="icons">
+            <a href="#" class="icons padd_l">
                 <img src="assets/img/libreria.svg" alt="libreria" width="15%">
                 <span>La tua libreria</span>
             </a>
-            <div id="playlist" class="d_flex flex_column">
+            <div id="playlist_top" class="padd_l">
                 <h6 class="white_txt">PLAYLIST</h6>
                 <a href="#">
                     <span id="add" class="d_ib">+</span>
                     <span><strong>Crea Playlist</strong></span>
                 </a>
+            </div>
+            <div id="playlist" class="d_flex flex_column padd_l">
                 <a href="#">Nome Playlist</a>
                 <a href="#">Nome Playlist</a>
                 <a href="#">Nome Playlist</a>
@@ -50,13 +52,13 @@
             </div>
         </div>
 
-        <div id="tricky_box" class="icons p_sticky">
-            <a href="#">
+        <div id="tricky_box" class="icons p_sticky d_flex flex_column flex_main_center">
+            <a href="#" class="d_block">
                 <img src="assets/img/download.svg" alt="download" width="10%">
                 <span>Installa App</span>
             </a>
             <hr style="border-color: #717171; margin: 5px 15px 5px 0;">
-            <a href="#">
+            <a href="#" class="d_block">
                 <img id="profile" src="assets/img/profile.svg" alt="download" width="15%">
                 <span class="white_txt">John Doe</span>
             </a>
