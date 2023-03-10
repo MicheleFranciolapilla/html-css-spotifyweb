@@ -227,6 +227,9 @@
 /* .flex_cross_btw */
 /* .flex_cross_evenly */
 /* .flex_cross_around */
+/* .flex_self_center */
+/* .flex_self_start */
+/* .flex_self_end */
 /**********************************************/
 
 /* Display none */
@@ -361,6 +364,20 @@
     align-content: space-around;
 }
 
+/* Posizionamento "center" del flex item, sul cross axis */
+.flex_self_center{
+    align-self: center;
+}
+
+/* Posizionamento "flex-start" del flex item, sul cross axis */
+.flex_self_start{
+    align-self: flex-start;
+}
+
+/* Posizionamento "flex-end" del flex item, sul cross axis */
+.flex_self_end{
+    align-self: flex-end;
+}
 /********** BLOCK UTILITIES **********/
 /* .center_text */
 /* .center_block */
