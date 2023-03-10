@@ -276,6 +276,74 @@ a
     z-index: 1001;
 }
 
+#bottom_bar > #left_part
+{
+    flex-basis: 25%;
+}
+
+#bottom_bar > #right_part
+{
+    padding: 0 10px;
+    flex-basis: 25%;
+    gap: 1rem;
+}
+
+#bottom_bar > #right_part > #volume_bar
+{
+    flex-basis: 50%;
+    width: 100%;
+    height: 4px;
+    background-color: rgb(78, 76, 76);
+    border-radius: 2px;
+}
+
+#bottom_bar > #right_part > #volume_bar > #volume
+{
+    width: 39%;
+    height: 100%;
+    background-color: rgb(150, 147, 147);
+    border-radius: 2px;
+}
+
+#bottom_bar > #right_part > #volume_bar > #handle
+{
+    top: -6px;
+    left: 39%;
+}
+
+#bottom_bar > #middle_part
+{
+    flex-basis: 40%;
+}
+
+#bottom_bar > #middle_part i
+{
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+#bottom_bar > #middle_part > div.d_flex
+{
+    width: 100%;
+}
+
+#bottom_bar > #middle_part #time_line
+{
+    width: 80%;
+    height: 4px;
+    background-color: rgb(78, 76, 76);
+    border-radius: 2px;
+}
+
+#bottom_bar > #middle_part #time_line > #time
+{
+    width: 66%;
+    height: 100%;
+    background-color: rgb(150, 147, 147);
+    border-radius: 2px;
+}
+
+
 /**************************************************/
 /* SETTORE HOVER */
 /**************************************************/
@@ -296,6 +364,16 @@ a
 #core > .not_menu > a > div.p_rel:hover::before 
 {
     display: block;
+}
+
+#bottom_bar > #middle_part #time_line:hover
+{
+    cursor: pointer;
+}
+
+#bottom_bar > #right_part > #volume_bar > #handle:hover
+{
+    cursor: grab;
 }
 
 /**************************************************/
