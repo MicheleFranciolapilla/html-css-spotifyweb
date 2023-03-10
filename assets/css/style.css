@@ -62,7 +62,6 @@ a
     height: calc(100% - (var(--tricky_box_h) + var(--bottom_bar_h)));
     z-index: 1000;
     background-color: var(--side_bar_col);
-    /* padding-left: var(--side_left_padd); */
     gap: var(--side_flex_gap);
 }
 
@@ -162,7 +161,6 @@ a
 #core
 {
     padding-left: var(--core_gap_large);
-    /* padding-right: var(--core_gap_large); */
     padding-top: calc(var(--top_bar_h) + var(--core_gap_large));
 }
 
@@ -238,14 +236,17 @@ a
     border-radius: 50%;
 }
 
+#empty
+{
+    height: var(--bottom_bar_h);
+}
+
 #bottom_bar
 {
     min-height: var(--bottom_bar_h);
     background-color: var(--bottom_bar_col);
     z-index: 1001;
 }
-
-
 
 /**************************************************/
 /* SETTORE MEDIA QUERY */
@@ -284,7 +285,7 @@ a
     }
 }
 
-/* TABLET MEDIUM - MAX-WIDTH: 768 PIXEL */
+/* TABLET (MEDIUM VW)- MAX-WIDTH: 768 PIXEL */
 @media only screen and (max-width: 768px)
 {
     #core
@@ -293,9 +294,22 @@ a
         padding-top: calc(var(--top_bar_h) + var(--core_gap_medium));
     }
 
-    #page_core > #core > #menu
+    #page_core > #core > #menu > a
     {
-        width: 60%;
+        font-size: 0.5rem;
+        padding: 0 0.5rem;
+        line-height: 1.3rem;
+    }
+    
+    #page_core > #core > #menu #short_line::before
+    {
+        position: absolute;
+        top: 1rem;
+        left: 30%;
+        height: 0;
+        width: 40%;
+        content: "";
+        border-top: 2px solid yellowgreen;
     }
 
     #core > .not_menu
@@ -316,7 +330,7 @@ a
     }
 }
 
-/* SMARTPHONE S - MAX-WIDTH: 425 PIXEL */
+/* SMARTPHONE (MEDIUM VW) - MAX-WIDTH: 425 PIXEL */
 @media only screen and (max-width: 425px)
 {
     #core > .not_menu > a
@@ -325,8 +339,8 @@ a
     }
 }
 
-/* SMARTPHONE XS - MAX-WIDTH: 320 PIXEL */
-@media only screen and (max-width: 320px)
+/* SMARTPHONE S (SMALL VW) - MAX-WIDTH: 375 PIXEL */
+@media only screen and (max-width: 375px)
 {
     #side_bar > #logo > #wide_logo,
     #side_bar > #playlist_top,
@@ -345,7 +359,8 @@ a
         align-items: center;
     }
 
-    #side_bar > .padd_l{
+    #side_bar > .padd_l
+    {
         padding-left: 0;
     }
 
@@ -386,6 +401,16 @@ a
     #core > .not_menu > a
     {
         flex-basis: calc((99% - var(--core_gap_medium)) / 2);
+
+    }
+}
+
+/* SMARTPHONE XS (EXTRA-SMALL VW) - MAX-WIDTH: 320 PIXEL */
+@media only screen and (max-width: 320px)
+{
+    #core > .not_menu > a
+    {
+        flex-basis: 99%;
 
     }
 }
