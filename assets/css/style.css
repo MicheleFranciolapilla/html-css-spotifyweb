@@ -67,6 +67,7 @@ a
     top: 50%;
     right: 30px;
     transform: translateY(-50%);
+    transition: all 1s;
 }
 
 #side_bar
@@ -258,16 +259,6 @@ a
     display: none;
 }
 
-#core > .not_menu > a img:hover
-{
-    opacity: 0.3;
-}
-
-#core > .not_menu > a > div.p_rel:hover::before 
-{
-    display: block;
-}
-
 #core > #popular > a img
 {
     border-radius: 50%;
@@ -283,6 +274,28 @@ a
     min-height: var(--bottom_bar_h);
     background-color: var(--bottom_bar_col);
     z-index: 1001;
+}
+
+/**************************************************/
+/* SETTORE HOVER */
+/**************************************************/
+#top_bar > #cta:hover
+{
+    line-height: 1.55rem;
+    font-size: 0.85rem;
+    color: orangered;
+    border: 2px solid orangered;
+    padding: 0.35rem 1.35rem;
+}
+
+#core > .not_menu > a img:hover
+{
+    opacity: 0.3;
+}
+
+#core > .not_menu > a > div.p_rel:hover::before 
+{
+    display: block;
 }
 
 /**************************************************/
