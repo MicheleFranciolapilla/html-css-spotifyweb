@@ -479,29 +479,43 @@ a
         flex-basis: 40%;
     }
 
+    #bottom_bar > #left_part,
+    #bottom_bar > #right_part
+    {
+        padding: 0 5px;
+        gap: 0.3rem;
+    }
+    
+    #bottom_bar > #left_part > #poster,
+    #bottom_bar > #right_part > #volume_box
+    {
+        gap: 0.3rem;
+    }
+    
     #bottom_bar > #left_part > #poster > img
     {
-        max-width: calc(var(--bottom_bar_h) * 0.6);
+        max-width: calc(var(--bottom_bar_h) * 0.5);
         aspect-ratio: 1;
     }
     
     #bottom_bar > #right_part > #volume_box > #volume_bar
     {
-        width: calc(1 * var(--bottom_bar_h));
+        width: calc(0.7 * var(--bottom_bar_h));
     }
     
     #bottom_bar > #middle_part i
     {
-        font-size: 0.5rem;
-        padding: 0.5rem;
+        font-size: 0.4rem;
+        padding: 0.4rem;
     }
     
     #bottom_bar > #middle_part #time_line
     {
-        width: 70%;
+        width: 60%;
     }
     
 }
+
 
 /* SMARTPHONE (MEDIUM VW) - MAX-WIDTH: 425 PIXEL */
 @media only screen and (max-width: 425px)
@@ -509,6 +523,45 @@ a
     #core > .not_menu > a
     {
         flex-basis: calc((99% - var(--core_gap_medium)) / 2);
+    }
+
+    #bottom_bar > #left_part
+    {
+        padding-right: 0;
+        gap: 0.1rem;
+    }
+
+    #bottom_bar > #right_part
+    {
+        padding-left: 0;
+        gap: 0.1rem;
+    }
+
+    #bottom_bar > #left_part > #poster > img
+    {
+        max-width: calc(var(--bottom_bar_h) * 0.4);
+        aspect-ratio: 1;
+    }
+    
+    #bottom_bar > #right_part > #volume_box > #volume_bar
+    {
+        width: calc(0.6 * var(--bottom_bar_h));
+    }
+
+    #bot_left_icons,
+    #bot_right_icons
+    {
+        flex-direction: column;
+    }
+
+    #bottom_bar > #middle_part i
+    {
+        padding: 0.2rem;
+    }
+    
+    #bottom_bar > #middle_part #time_line
+    {
+        width: 55%;
     }
 }
 
@@ -576,6 +629,25 @@ a
         flex-basis: calc((99% - var(--core_gap_medium)) / 2);
 
     }
+
+    #bottom_bar > #middle_part
+    {
+        flex-basis: 55%;
+    }
+
+    #bottom_bar > #left_part,
+    #bottom_bar > #right_part
+    {
+        flex-basis: 22.5%;
+    }
+
+    #bot_left_icons,
+    #bot_right_icons,
+    #middle_part > div.d_flex > span
+    {
+        display: none;
+    }
+
 }
 
 /* SMARTPHONE XS (EXTRA-SMALL VW) - MAX-WIDTH: 320 PIXEL */
@@ -584,6 +656,7 @@ a
     #core > .not_menu > a
     {
         flex-basis: 99%;
-
     }
+
+
 }
