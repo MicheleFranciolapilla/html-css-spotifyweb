@@ -292,19 +292,21 @@ a
 
 #bottom_bar > #left_part > #poster
 {
-    flex-basis: calc(var(--bottom_bar_h) * 0.8);
+    /* flex-basis: calc(var(--bottom_bar_h) * 0.8); */
+    flex-basis: 75%;
+    gap: 10px;
 }
 
 #bottom_bar > #left_part > #poster > img
 {
-    width: 100%;
+    width: calc(var(--bottom_bar_h) * 0.8);
     aspect-ratio: 1;
 }
 
-#bottom_bar > #left_part > #bot_left_icons
+/* #bottom_bar > #left_part > #bot_left_icons
 {
     flex-basis: 25%;
-}
+} */
 
 #bottom_bar > #right_part > #volume_bar
 {
