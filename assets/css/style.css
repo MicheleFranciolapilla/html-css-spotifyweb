@@ -138,6 +138,8 @@ a
     overflow: auto;
 }
 
+
+
 #tricky_box
 {
     padding-left: var(--side_left_padd);
@@ -208,6 +210,8 @@ a
     content: "";
     border-top: 2px solid yellowgreen;
 }
+
+
 
 #core > .core_gap
 {
@@ -360,75 +364,18 @@ a
     border-radius: 2px;
 }
 
-
-/**************************************************/
-/* SETTORE HOVER */
-/**************************************************/
-#top_bar > #cta:hover
+#bottom_bar > #left_part a:hover,
+#bottom_bar > #right_part a:hover,
+#bottom_bar > #middle_part a:hover
 {
-    line-height: 1.55rem;
-    font-size: 0.85rem;
-    color: orangered;
-    border: 2px solid orangered;
-    padding: 0.35rem 1.35rem;
+    opacity: 0.35;
 }
 
-#core > .not_menu > a img:hover
-{
-    opacity: 0.3;
-}
-
-#core > .not_menu > a > div.p_rel:hover::before 
-{
-    display: block;
-}
-
-#bottom_bar > #middle_part #time_line:hover
-{
-    cursor: pointer;
-}
-
-#bottom_bar > #right_part > #volume_box > #volume_bar > #handle:hover
-{
-    cursor: grab;
-}
 
 /**************************************************/
 /* SETTORE MEDIA QUERY */
 /**************************************************/
-/* MODALITA' ALTEZZA RIDOTTA A 350 PIXEL */
-@media only screen and (max-height: 350px)
-{
-    #side_bar
-    {
-        height: calc(100% - (var(--tricky_box_h) + var(--bottom_bar_h)) + (var(--tricky_box_h) / 2));
-    }
 
-    #tricky_box
-    {
-        height: calc(var(--tricky_box_h) / 2);
-    }
-
-    #tricky_box > hr,
-    #tricky_box > a:last-child
-    {
-        display: none;
-    }
-}
-
-/* MODALITA' ALTEZZA RIDOTTA A 320 PIXEL */
-@media only screen and (max-height: 320px)
-{
-    #side_bar
-    {
-        height: calc(100% - var(--bottom_bar_h));
-    }
-
-    #tricky_box
-    {
-        display: none;
-    }
-}
 
 /* TABLET (MEDIUM VW)- MAX-WIDTH: 768 PIXEL */
 @media only screen and (max-width: 768px)
@@ -659,4 +606,96 @@ a
     }
 
 
+}
+
+/* MODALITA' ALTEZZA RIDOTTA A 350 PIXEL */
+@media only screen and (max-height: 350px)
+{
+    #side_bar
+    {
+        height: calc(100% - (var(--tricky_box_h) + var(--bottom_bar_h)) + (var(--tricky_box_h) / 2));
+    }
+
+    #tricky_box
+    {
+        height: calc(var(--tricky_box_h) / 2);
+    }
+
+    #tricky_box > hr,
+    #tricky_box > a:last-child
+    {
+        display: none;
+    }
+}
+
+/* MODALITA' ALTEZZA RIDOTTA A 320 PIXEL */
+@media only screen and (max-height: 320px)
+{
+    #side_bar
+    {
+        height: calc(100% - var(--bottom_bar_h));
+    }
+
+    #tricky_box
+    {
+        display: none;
+    }
+}
+
+/**************************************************/
+/* SETTORE HOVER */
+/**************************************************/
+#top_bar > #cta:hover
+{
+    line-height: 1.55rem;
+    font-size: 0.85rem;
+    color: orangered;
+    border: 2px solid orangered;
+    padding: 0.35rem 1.35rem;
+}
+
+#side_bar > a:hover,
+#tricky_box a:hover
+{
+    opacity: 0.35;
+}
+
+
+
+#side_bar > #playlist_top #add:hover
+{
+    background-color: white;
+}
+
+#side_bar > #playlist_top strong:hover,
+#side_bar > #playlist > a:hover
+{
+    color: white;
+    font-weight: 600;
+}
+
+#page_core > #core > #menu > a:hover
+{
+    color: white;
+    font-weight: 600;
+}
+
+#core > .not_menu > a img:hover
+{
+    opacity: 0.3;
+}
+
+#core > .not_menu > a > div.p_rel:hover::before 
+{
+    display: block;
+}
+
+#bottom_bar > #middle_part #time_line:hover
+{
+    cursor: pointer;
+}
+
+#bottom_bar > #right_part > #volume_box > #volume_bar > #handle:hover
+{
+    cursor: grab;
 }
