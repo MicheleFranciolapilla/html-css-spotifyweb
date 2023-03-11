@@ -232,15 +232,16 @@
         </div>
 
         <div id="bottom_bar" class="d_flex flex_main_btw flex_cross_center p_rel">
-            <div id="left_part" class="d_flex flex_main_btw flex_cross_center">
-                <a href="#" id="poster" class="d_flex flex_cross_center">
+        <!-- <div id="bottom_bar" class="d_flex flex_column flex_main_center p_rel"> -->
+            <div id="left_part" class="d_flex flex_main_start flex_cross_center">
+                <a href="#" id="poster" class="d_flex flex_main_start flex_cross_center">
                     <img src="https://static.displate.com/857x1200/displate/2021-09-28/9de4ceb69e016a002984f2d97f23acfc_e37a8a4f5617fcef1f79224156359691.jpg" alt="recent">
                     <div id="poster_info" class="d_if flex_column flex_main_center flex_cross_start">
                         <span class="white_txt">Iron Maiden</span>
-                        <span>Album: Powerslave</span>
+                        <span>Album</span>
                     </div>
                 </a>
-                <div id="bot_left_icons">
+                <div id="bot_left_icons" class="d_flex flex_main_start flex_cross_center">
                     <a href="#">
                         <i class="fa-regular fa-heart white_txt"></i>
                     </a>
@@ -276,20 +277,23 @@
                 </div>
             </div>
             <div id="right_part" class="d_flex flex_main_end flex_cross_center">
-                <a href="#">
-                    <i class="fa-solid fa-list-ul white_txt"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-desktop white_txt"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-volume-high white_txt"></i>
-                </a>
-                <div id="volume_bar" class="p_rel">
-                    <div id="volume"></div>
-                    <i id="handle" class="fa-solid fa-grip-lines-vertical p_abs"></i>
+                <div id="bot_right_icons" class="d_flex flex_main_end flex_cross_center">
+                    <a href="#">
+                        <i class="fa-solid fa-list-ul white_txt"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-desktop white_txt"></i>
+                    </a>
                 </div>
-                </a>
+                <div id="volume_box" class="d_flex flex_main_end flex_cross_center">
+                    <a href="#">
+                        <i class="fa-solid fa-volume-high white_txt"></i>
+                    </a>
+                    <div id="volume_bar" class="p_rel">
+                        <div id="volume"></div>
+                        <i id="handle" class="fa-solid fa-grip-lines-vertical p_abs"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

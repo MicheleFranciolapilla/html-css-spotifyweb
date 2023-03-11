@@ -276,48 +276,50 @@ a
     z-index: 1001;
 }
 
-#bottom_bar > #right_part,
-#bottom_bar > #left_part
+#bottom_bar > #middle_part
+{
+    flex-basis: 50%;
+}
+
+#bottom_bar > #left_part,
+#bottom_bar > #right_part
 {
     padding: 0 10px;
     flex-basis: 25%;
     height: 100%;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
-#bottom_bar > #middle_part
+#bottom_bar > #left_part > #poster,
+#bottom_bar > #right_part > #volume_box
 {
-    flex-basis: 40%;
+    /* flex-basis: 75%; */
+    gap: 0.5rem;
 }
 
-#bottom_bar > #left_part > #poster
+#bottom_bar > #left_part > #bot_left_icons,
+#bottom_bar > #right_part > #bot_right_icons
 {
-    /* flex-basis: calc(var(--bottom_bar_h) * 0.8); */
-    flex-basis: 75%;
-    gap: 10px;
+    /* flex-basis: 25%; */
+    gap: 0.3rem;
 }
 
 #bottom_bar > #left_part > #poster > img
 {
-    width: calc(var(--bottom_bar_h) * 0.8);
+    max-width: calc(var(--bottom_bar_h) * 0.8);
     aspect-ratio: 1;
 }
 
-/* #bottom_bar > #left_part > #bot_left_icons
+#bottom_bar > #right_part > #volume_box > #volume_bar
 {
-    flex-basis: 25%;
-} */
-
-#bottom_bar > #right_part > #volume_bar
-{
-    flex-basis: 50%;
-    width: 100%;
+    width: calc(1.5 * var(--bottom_bar_h));
+    /* flex-basis: 80%; */
     height: 4px;
     background-color: rgb(78, 76, 76);
     border-radius: 2px;
 }
 
-#bottom_bar > #right_part > #volume_bar > #volume
+#bottom_bar > #right_part > #volume_box > #volume_bar > #volume
 {
     width: 39%;
     height: 100%;
@@ -325,7 +327,7 @@ a
     border-radius: 2px;
 }
 
-#bottom_bar > #right_part > #volume_bar > #handle
+#bottom_bar > #right_part > #volume_box > #volume_bar > #handle
 {
     top: -6px;
     left: 39%;
@@ -386,7 +388,7 @@ a
     cursor: pointer;
 }
 
-#bottom_bar > #right_part > #volume_bar > #handle:hover
+#bottom_bar > #right_part > #volume_box > #volume_bar > #handle:hover
 {
     cursor: grab;
 }
@@ -471,6 +473,34 @@ a
     {
         font-size: 0.7rem;
     }
+
+    #bottom_bar > #middle_part
+    {
+        flex-basis: 40%;
+    }
+
+    #bottom_bar > #left_part > #poster > img
+    {
+        max-width: calc(var(--bottom_bar_h) * 0.6);
+        aspect-ratio: 1;
+    }
+    
+    #bottom_bar > #right_part > #volume_box > #volume_bar
+    {
+        width: calc(1 * var(--bottom_bar_h));
+    }
+    
+    #bottom_bar > #middle_part i
+    {
+        font-size: 0.5rem;
+        padding: 0.5rem;
+    }
+    
+    #bottom_bar > #middle_part #time_line
+    {
+        width: 70%;
+    }
+    
 }
 
 /* SMARTPHONE (MEDIUM VW) - MAX-WIDTH: 425 PIXEL */
