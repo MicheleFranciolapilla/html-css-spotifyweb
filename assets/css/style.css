@@ -276,16 +276,34 @@ a
     z-index: 1001;
 }
 
+#bottom_bar > #right_part,
 #bottom_bar > #left_part
-{
-    flex-basis: 25%;
-}
-
-#bottom_bar > #right_part
 {
     padding: 0 10px;
     flex-basis: 25%;
+    height: 100%;
     gap: 1rem;
+}
+
+#bottom_bar > #middle_part
+{
+    flex-basis: 40%;
+}
+
+#bottom_bar > #left_part > #poster
+{
+    flex-basis: calc(var(--bottom_bar_h) * 0.8);
+}
+
+#bottom_bar > #left_part > #poster > img
+{
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+#bottom_bar > #left_part > #bot_left_icons
+{
+    flex-basis: 25%;
 }
 
 #bottom_bar > #right_part > #volume_bar
@@ -309,11 +327,6 @@ a
 {
     top: -6px;
     left: 39%;
-}
-
-#bottom_bar > #middle_part
-{
-    flex-basis: 40%;
 }
 
 #bottom_bar > #middle_part i
